@@ -21,7 +21,7 @@ overflow: hidden;
 width: 100%;
 display: flex;
 justify-content: center;
-align-items: top;
+align-items: bottom;
 
 }
 .bg-image img{
@@ -55,3 +55,11 @@ animation: myAnim 9s ease-in 0s infinite alternate ;
 	}
 
 }
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .bg-image{
+   
+  align-items: center;
+  
+  }
+ }
