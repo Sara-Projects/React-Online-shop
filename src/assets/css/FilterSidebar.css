@@ -1,0 +1,75 @@
+.text-header{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--gray);
+
+}
+.text-subline {
+  position: relative;
+  height: 3px;
+  padding: 0;
+  background: #d9d9d9;
+  border: none;
+}
+.text-subline:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 3rem;
+  background: #191919;
+}
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: 1.7rem;
+  padding-left: 1.5rem;
+  }
+.custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-control-label {
+  position: relative;
+}
+.custom-control-label:hover {
+  cursor: pointer;
+}
+.custom-control-label::after { 
+  content: "";
+  position: absolute;
+  top: 0.31rem;
+  left: -1.5rem;
+  display: block;
+  width: 0.88rem;
+  height: 0.88rem;
+  pointer-events: none;
+   user-select: none;
+  background-color: #f5f5f5;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.15);
+  border-radius: 3px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+  color: #fff;
+  background-color: #42b574;
+}
+.custom-control-label::before {
+  position: absolute;
+  top: 0.31rem;
+  left: -1.5rem;
+  display: block;
+  width: 0.88rem;
+  height: 0.88rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 10 10'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+  z-index: 1;
+}

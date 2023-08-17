@@ -1,0 +1,110 @@
+/* $dark: #2c2b30;
+$gray: #4f4f51;
+$light-blue: #d6d6d6;
+$light-purple: #f2c4ce;
+$light-pink: #f58f7c;
+$bg-hover-color: #f58e7c91;
+$hover-color: #fff;
+$color-white: #fff;
+$color-black: #000;
+ */
+:root {
+ --bg-footer-bottom: #181828;
+ --bg-footer-top: #1c1f2f;
+}
+.footer-title {
+ font-size: 1rem;
+ font-weight: 600;
+ position: relative;
+ padding-bottom: 0.2rem;
+}
+.footer-title::after {
+ width: 50px;
+ background: #fff;
+ opacity: 0.2;
+ height: 2px;
+ content: "";
+ position: absolute;
+ bottom: 0;
+ left: 0;
+}
+.footer-text a,
+.footer-text {
+ font-size: 0.7rem;
+ letter-spacing: 1px;
+ color: var(--light-blue);
+}
+.footer-top {
+ background-color: var(--bg-footer-top);
+ color: var(--light-blue);
+}
+.footer-bottom {
+ background-color: var(--bg-footer-bottom);
+ color: var(--light-blue);
+}
+.subscrib-btn.btn {
+ color: var(--light-blue);
+ cursor: pointer;
+ padding: 0.8rem;
+ font-size: 0.8rem;
+ font-weight: 400;
+ transition: all 0.5s;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ outline: none !important;
+ background-color: var(--bg-footer-top);
+ border-radius: 5px;
+ /* min-width: 140px; */
+ box-shadow: 3px 9px 16px rgb(0, 0, 0, 0.4),
+  -3px -3px 10px rgba(255, 255, 255, 0.06),
+  inset 14px 14px 26px rgb(0, 0, 0, 0.3),
+  inset -3px -3px 15px rgba(255, 255, 255, 0.05);
+ border-width: 1px 0px 0px 1px;
+ border-style: solid;
+ border-color: #2e344d;
+ transition: all 0.3s ease-in-out 0s;
+}
+.subscrib-btn.btn:hover {
+ box-shadow: 0 0px 20px rgba(72, 39, 48, 0.7);
+ background: rgb(242, 196, 206);
+ background: linear-gradient(
+  to right,
+  rgba(242, 196, 206, 1) 0%,
+  rgba(214, 214, 214, 1) 45%,
+  rgba(245, 143, 124, 1) 100%
+ );
+ color: white;
+}
+.form-control-footer {
+ display: block;
+ width: 100%;
+ padding: 0.8rem;
+ font-size: 0.8rem;
+ font-weight: 400;
+ line-height: 1.5;
+ background-color: var(--bg-footer-top);
+ background-clip: padding-box;
+ border: 1px solid #2e344d;
+ appearance: none;
+ box-shadow: unset;
+ border-radius: 5px;
+ transition: all 0.3s ease-in-out 0s;
+ color: var(--light-blue);
+}
+.form-control-footer:focus {
+
+ color: unset;
+ background-color: unset;
+ box-shadow: 0 0 0 0.1rem var(--light-blue);
+}
+.form-control-footer::placeholder {
+ color: var(--light-blue);
+}
+.error-message {
+ position: absolute;
+ z-index: 1090;
+ top: 2%;
+ right: 5%;
+ color: rgb(243, 72, 72);
+ font-size: 0.7rem;
+}

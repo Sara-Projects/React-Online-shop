@@ -1,0 +1,22 @@
+.btn-counter{
+
+  background-color: var(--light-pink);
+  color: #fff;
+  border-radius: 0;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+.btn.btn-counter:hover {
+color: #fff;
+  background-color: var(--light-pink);
+  opacity: 0.7;
+  
+}
+.accordion-button:focus {
+  border-color: var(--light-pink);
+  box-shadow: unset;
+}
+.accordion-button:not(.collapsed) {
+  background-color:var(--light-purple);
+  box-shadow: unset;
+}

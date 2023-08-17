@@ -1,0 +1,114 @@
+:root {
+ --bg-hover-color: #f58e7c91;
+ --hover-color: #fff;
+}
+
+@media (min-width: 768px) {
+ .navbar-expand-md .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+ }
+ .navbar-container {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    background-color: #0000007b !important;
+    box-shadow: 8px 12px 15px 2px rgba(255, 255, 255, 0.4);
+   }
+   .sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1090;
+   }
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #fff;
+}
+.navbar {
+ --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.navbar-nav {
+ --bs-nav-link-font-size: 1rem;
+ --bs-nav-link-font-weight: 500;
+ --bs-nav-link-color: #fff;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+ color: var(--hover-color);
+}
+.nav-link {
+ position: relative;
+ z-index: 1090;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+ border-bottom: 2px solid var(--bg-hover-color);
+}
+
+.nav-link::before {
+ content: " ";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ transform: scaleY(0);
+ transform-origin: left top;
+ background: var(--bg-hover-color);
+
+ visibility: hidden;
+ transition: transform 0.4s ease;
+ z-index: -1;
+}
+.nav-link:hover::before {
+ visibility: visible;
+ transform: scaleY(1);
+ transform-origin: left bottom;
+}
+
+.offcanvas {
+ max-width: 60%;
+ color: var(--gray);
+ background-color: var(--light-blue);
+}
+.list-group-item {
+ background-color: var(--light-blue);
+ color: var(--grayr);
+}
+.list-group-item.active {
+ color: var(--hover-color);
+ background-color: var(--bg-hover-color);
+ border: unset;
+}
+
+.list-group-item-action:active {
+ color: var(--hover-color);
+ background-color: var(--bg-hover-color);
+}
+
+.navbar-toggler {
+ padding: 0.3rem 0.6rem;
+ margin-left: 0.4rem;
+ font-size: var(--bs-navbar-toggler-font-size);
+ color: unset;
+ background-color: var(--light-pink);
+ border: var(--bs-border-width) solid var(--light-pink);
+}
+.logout-sm {
+ color: var(--light-pink);
+}
+#badge-bascket{
+    position: absolute;
+   background-color: rgb(72, 235, 181);
+   left: 0;
+   top: 0;
+   font-size: 0.7rem;
+}
+
